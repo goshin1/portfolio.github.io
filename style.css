@@ -1,0 +1,497 @@
+body {
+    margin : 0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+  }
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+}
+
+/* 핸드폰 */
+#phoneBox{
+    margin: 20px auto;
+    width: 20%;
+    height: 80%;
+    /* overflow: hidden; */
+    position: relative;
+    background-color: rgb(255, 245, 216);
+}
+
+#phoneLeft, #phoneRight{
+    margin-top: 10px;
+    width: 30%;
+    min-width: 150px;
+    max-width: 500px;
+    max-height: 870px;
+    background-color: rgb(31, 31, 31);
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+    border: 0.5vw solid rgb(65, 65, 65);
+    float: left;
+    position: absolute;
+    transition: all 0.2s;
+    color: rgb(255,255,255);
+    aspect-ratio: 9 / 16;
+}
+
+#phoneLeft{
+    transform-origin: left center;
+    transition-timing-function: ease-in;
+    animation: phoneLeft 5s 1 forwards;
+}
+
+#phoneRight{
+    animation: phoneRight 5s 1 forwards;
+    transition-timing-function: ease-in;
+    border-left: none;
+    margin-left: 50%;
+}
+
+/* 첫 시작 애니메이션 */
+@keyframes phoneLeft {
+    0%{
+        margin-left: 35%;
+        transform : rotateY(0deg);
+        border: 0.5vw solid rgb(65, 65, 65);
+        background-image: none;
+    }
+    20%{
+        margin-left: 35%;
+        transform : rotateY(0deg);
+        border: 0.5vw solid rgb(65, 65, 65);
+        background-image: none;
+    }
+    40%{
+        margin-left: 35%;
+        transform : rotateY(0deg);
+        border: 0.5vw solid rgb(65, 65, 65);
+        background-image: none;
+    }
+    60%{
+        margin-left: 35%;
+        transform : rotateY(0deg);
+        border: 0.5vw solid rgb(65, 65, 65);
+        background-image: none;
+    }
+    80%{
+        margin-left: 50%;
+        transform : rotateY(0deg);
+        border: 0.5vw solid rgb(65, 65, 65);
+        background-image: none;
+    }
+    100%{
+        margin-left: 50%;
+        transform : rotateY(180deg);
+        background-image: url(./images/back_left.png);
+        border-left: none;
+    }
+}
+
+@keyframes phoneRight {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        background-image: url(./images/back_right.png);
+        opacity: 100%;
+    }
+}
+
+
+/* 메인 => 설명 애니메이션 */
+@keyframes main_to_explain_left {
+    0%{
+        margin-left: 50%;
+        transform : rotateY(180deg);
+        border-left: none;
+        background-image: url(./images/back_left.png);
+        opacity: 100%;
+    }
+    100%{
+        margin-left: 50%;
+        transform : rotateY(180deg);
+        border-left: none;
+        background-image: none;
+        background-color: rgb(32, 32, 32);
+        opacity: 100%;
+    }
+}
+
+@keyframes main_to_explain_right {
+    0%{
+        background-image: url(./images/back_right.png);
+        opacity: 100%;
+    }
+    100%{
+        background-image: none;
+        background-color: rgb(32, 32, 32);
+        opacity: 100%;
+    }
+}
+
+/* 설명 => 메인 애니메이션 */
+@keyframes explain_to_main_left {
+    0%{
+        margin-left: 50%;
+        transform : rotateY(180deg);
+        border-left: none;
+        background-color: rgb(32, 32, 32);
+        opacity: 100%;
+    }
+    100%{
+        margin-left: 50%;
+        transform : rotateY(180deg);
+        border-left: none;
+        background-image: none;
+        background-image: url(./images/back_left.png);
+        opacity: 100%;
+    }
+}
+
+@keyframes explain_to_main_right {
+    0%{
+        
+        background-color: rgb(32, 32, 32);
+        opacity: 100%;
+    }
+    100%{
+        background-image: url(./images/back_right.png);
+        opacity: 100%;
+    }
+}
+
+
+#loading{
+    margin-top: 45%;
+    width: 50%;
+    animation: loading 2s linear 1 forwards;
+    transform-origin: 50% 50%;
+}
+
+/* 로딩 애니메이션 */
+@keyframes loading {
+    0%{
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 0%;
+    }
+}
+
+/* 화면 켜지기 애니메이션*/
+@keyframes screenOn {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+/* 화면 */
+#screen{
+    max-width: 1000px;
+    margin: 10px 24.5%;
+    margin-top: 20px;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    animation: screenOn 6s 1 forwards;
+    aspect-ratio: 16 / 14;
+    transition: all 0.2s;
+}
+
+/* 상단 시계 및 와이파이 등 */
+.timezone{
+    top: 10px;
+    min-width: 300px;
+    width: 100%;
+    height: 5%;
+    line-height: -50px;
+    color: rgb(255,255,255);
+    font-size: 1vw;
+}
+.timezone span{
+    width: 30%
+}
+
+.timezone span:nth-child(1){
+    float: left;
+}
+.timezone span:nth-child(2){
+    float: right;
+    text-align: right;
+    text-indent: 30px;
+}
+
+.timezone > span > img{
+    width: 7%
+}
+
+/* 메인 화면 */
+#screenChange{
+    width: 100%;
+    height: 95%;
+    position: relative;
+}
+
+.screenBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s;
+}
+
+#box1{
+    z-index: 1;
+}
+
+#box2{
+    opacity: 0;
+    z-index: 0;
+}
+
+/* 기본화면 */
+#mainHeader{
+    margin: 20px auto;
+    padding-top: 5%;
+    text-indent: 3%;
+    width: 90%;
+    height: 30%;
+    border-radius: 15px;
+    
+    background-image: url(/images/mainBack.png);
+    background-color: rgba(0,0,0,0.7);
+    background-position: center;
+    background-size: 100%;
+    color: rgb(255,255,255);
+}
+
+#mainHeader p{
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+#mainSearch{
+    margin: 15% auto 0px;
+    width: 90%;
+    height: 5%;
+    font-size: 1vw;
+    text-indent: 10px;
+    display: block;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(248, 248, 248);
+}
+
+#mainSearch img{
+    margin-top: 0.5%;
+    width: 4%;
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+#mainSearch img:nth-child(1){
+    margin-left: 1%;
+}
+
+#mainSearch img:nth-child(3), #mainSearch img:nth-child(4){
+    margin-right: 1%;
+    float: right;
+}
+
+#mainSearch input{
+    width: 75%;
+    height: 90%;
+    text-indent: 10px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 5px;
+    border: none;
+}
+
+#appMenu, #subMenu{
+    margin: 20px auto;
+    width: 90%;
+    height: 15%;
+    transition: all 0.2s;
+}
+
+#subMenu{
+    
+}
+
+.icon{
+    margin: 1% 0 0 4%;
+    width: 12%;
+    aspect-ratio: 1 / 1;
+    float: left;
+    text-align: center;
+    border-radius: 35%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.icon.dragging {
+    opacity: 0.5;
+}
+.icon.over {
+    background-color: rgba(0,0,0,0.5)
+} 
+
+.subIcon{
+    margin: 1% 0 0 4%;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    float: left;
+    text-align: center;
+    border-radius: 40%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#carrer{
+    align-content: center;
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: rgb(235, 145, 28);
+    color: rgb(255,255,255);
+}
+
+#github{
+    float: right;
+    background-image: url(/images/github.png);
+    background-color: rgb(214, 214, 214);
+    border: 0.3vw solid rgb(31, 31, 31);
+}
+
+.container {
+    width:100%;
+    height:60%;
+    perspective:500px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.slide {
+    transition:0.5s;
+    width:45%;
+    aspect-ratio: 9/16;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.slide:nth-of-type(1),.slide:nth-of-type(2){  
+        transform:translate(calc(-50%*5.1),-50%) translateZ(-100px);
+}
+.slide:nth-of-type(3){
+    transform:translate(calc(-55%*3.1),-50%) translateZ(-50px);
+}
+.slide:nth-of-type(4){
+    transform:translate(calc(-50%*1.1),-50%) translateZ(50px) ;
+}
+.slide:nth-of-type(5){
+    transform:translate(calc(-65%*-0.9),-50%) translateZ(-50px) ;
+}
+.slide:nth-of-type(6),.slide:nth-of-type(7){
+    transform:translate(calc(-60%*-2.9),-50%) translateZ(-100px) ;
+}
+
+.prev, .next{
+    background-color: rgb(31, 31, 31);
+    border: none;
+    border-radius: 5px;
+    font-size: 2vw;
+    color: rgb(255,255,255);
+    cursor: pointer;
+    width: 5%;
+    height: 10%;
+    position: absolute;
+    z-index: 5;
+}
+
+.prev{
+    margin-top: 20%;
+}
+
+.next{
+    margin-top: -30%;
+    right: 0;
+}
+
+#introduce{
+    margin: 20px auto;
+    padding: 0.5% 1.5%;
+    width: 90%;
+    height: 35%;
+    font-size: 1vw;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.7);
+    color: rgb(255,255,255);
+}
+
+#stack{
+    margin: 2% auto;
+    width: 100%;
+    height: 25%;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    display: block;
+}
+
+#stack img{
+    margin: 1%;
+    width: 7%;
+    cursor: pointer;
+}
+
+.github{
+    margin-right: 10px;
+    float: right;
+
+}
