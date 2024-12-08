@@ -322,7 +322,7 @@ function screenChangeFunction(event){
                         이는 테이블 외래키를 설정하고 팀원들의 코드를 병합하면서 구조를 파악하여 해결할 수 있었습니다.<br/>\
                         브라우저에서 어떻게 회원정보가 유지되는지 알 수 있었습니다.",
             "github" : "https://github.com/goshin1/universocial",
-            "stack" : ["html.png", "css.png", "js.png", "java.png"]
+            "stack" : ["html.png", "css.png", "js.png", "java.png", "mysql.png"]
         }
     }
     document.getElementById("projectTitle").innerHTML = select;
