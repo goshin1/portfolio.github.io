@@ -88,7 +88,7 @@ body {
     100%{
         margin-left: 50%;
         transform : rotateY(180deg);
-        background-image: url('.portfolio.github.io/images/back_left.png');
+        background-image: url('./portfolio.github.io/images/back_left.png');
         border-left: none;
     }
 }
@@ -110,7 +110,7 @@ body {
         opacity: 0;
     }
     100%{
-        background-image: url('.portfolio.github.io/images/back_right.png');
+        background-image: url('./portfolio.github.io/images/back_right.png');
         opacity: 100%;
     }
 }
@@ -122,7 +122,7 @@ body {
         margin-left: 50%;
         transform : rotateY(180deg);
         border-left: none;
-        background-image: url('.portfolio.github.io/images/back_left.png');
+        background-image: url('./portfolio.github.io/images/back_left.png');
         opacity: 100%;
     }
     100%{
@@ -137,7 +137,7 @@ body {
 
 @keyframes main_to_explain_right {
     0%{
-        background-image: url('.portfolio.github.io/images/back_right.png');
+        background-image: url('./portfolio.github.io/images/back_right.png');
         opacity: 100%;
     }
     100%{
@@ -161,7 +161,7 @@ body {
         transform : rotateY(180deg);
         border-left: none;
         background-image: none;
-        background-image: url('.portfolio.github.io/images/back_left.png');
+        background-image: url('./portfolio.github.io/images/back_left.png');
         opacity: 100%;
     }
 }
@@ -173,7 +173,7 @@ body {
         opacity: 100%;
     }
     100%{
-        background-image: url('.portfolio.github.io/images/back_right.png');
+        background-image: url('./portfolio.github.io/images/back_right.png');
         opacity: 100%;
     }
 }
@@ -364,7 +364,7 @@ body {
     margin : 2.5% 0px;
     width: 70%;
     height: 85%;
-    background-image: url('portfolio.github.io/images/mainBack.png');
+    background-image: url('/portfolio.github.io/images/mainBack.png');
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -529,7 +529,7 @@ table img{
 
 #github{
     float: right;
-    background-image: url('portfolio.github.io/images/github.png');
+    background-image: url('/portfolio.github.io/images/github.png');
     background-color: rgb(214, 214, 214);
     border: 0.3vw solid rgb(31, 31, 31);
     display: block;
@@ -677,7 +677,7 @@ input.next {
     aspect-ratio: 1 / 1;
     border: none;
     border-radius: 5px;
-    background-image: url('portfolio.github.io/images/back_white.png');
+    background-image: url('/portfolio.github.io/images/back_white.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 90%;
