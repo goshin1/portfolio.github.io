@@ -4,7 +4,7 @@ document.getElementById("mainHeader").style.height = "35%";
 
 const screen = document.getElementById("screen");
 const browserWidth = window.innerWidth;
-let value = (browserWidth - 300) / 2;
+let value = (browserWidth - screen.offsetWidth) / 2;
 screen.style.marginLeft = `${value}px`;
 
 
