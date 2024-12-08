@@ -218,7 +218,8 @@ body {
 #screen{
     max-width: 1000px;
     min-width: 300px;
-    margin: 2% 25%;
+    /* margin: 2% 25%; */
+    margin-top: 2%;
     width: 50%;
     position: absolute;
     z-index: 1;
@@ -230,14 +231,14 @@ body {
 
 @media (max-width: 580px) {
     #screen{
-        margin: 5% 22.5%;
+        margin-top: 5%;
         aspect-ratio: 9 / 13;
     }
     #phoneLeft, #phoneRight{
         aspect-ratio: 9 / 27;
     }
 }
-
+/* 
 @media (max-width: 540px) {
     #screen{
         margin: 5% 20%;
@@ -273,7 +274,7 @@ body {
     #screen{
         margin: 5% 2.5%;
     }
-}
+} */
 
 /* 상단 시계 및 와이파이 등 */
 #timezone{
@@ -598,13 +599,16 @@ table img{
 
 input.prev, input.next {
     font-size: 1.5em;
-    background-color: transparent;
+    background-color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
     position: absolute;
     top: 30%;
     transform: translateY(-50%);
     z-index: 1;
+    border-radius: 5px;
+    line-height: 30px;
 }
 
 input.prev {

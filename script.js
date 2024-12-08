@@ -2,6 +2,12 @@ const toDay = new Date();
 document.getElementById("time").innerHTML = toDay.getHours() + ":" + ("0" + toDay.getMinutes()).slice(-2)
 document.getElementById("mainHeader").style.height = "35%";
 
+const screen = document.getElementById("screen");
+const browserWidth = window.innerWidth;
+let value = (browserWidth - 300) / 2;
+screen.style.marginLeft = `${value}px`;
+
+
 let items = ["Depatorium", "ChatPress", "영어단어정복ABC", "PasserBob", "ReactCh", "universocial"];
 let itemsImg = {
     "Depatorium" : "/portfolio.github.io/images/icons/Depatorium.png",
