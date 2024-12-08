@@ -4,12 +4,12 @@ document.getElementById("mainHeader").style.height = "35%";
 
 let items = ["Depatorium", "ChatPress", "영어단어정복ABC", "PasserBob", "ReactCh", "universocial"];
 let itemsImg = {
-    "Depatorium" : "/images/icons/Depatorium.png",
-    "ChatPress" : "/images/icons/chatpress.png",
-    "영어단어정복ABC" : "/images/icons/englishnoteLogo.png",
-    "PasserBob" : "/images/icons/passerbob.PNG",
-    "ReactCh" : "/images/icons/reactCh.PNG",
-    "universocial" : "/images/icons/universocial.PNG"
+    "Depatorium" : "/portfolio.github.io/images/icons/Depatorium.png",
+    "ChatPress" : "/portfolio.github.io/images/icons/chatpress.png",
+    "영어단어정복ABC" : "/portfolio.github.io/images/icons/englishnoteLogo.png",
+    "PasserBob" : "/portfolio.github.io/images/icons/passerbob.PNG",
+    "ReactCh" : "/portfolio.github.io/images/icons/reactCh.PNG",
+    "universocial" : "/portfolio.github.io/images/icons/universocial.PNG"
 }
 
 const appMenu = document.getElementById('appMenu');
@@ -133,9 +133,9 @@ const slideImages = {
 function screenChangeFunction(event){
     const select = event.currentTarget.id;
     document.getElementById("timezone").style.color = 'rgb(0,0,0)';
-    document.getElementById("wifi").setAttribute("src", "/images/wifi_black.png");
-    document.getElementById("micro").setAttribute("src", "/images/micro_black.png");
-    document.getElementById("battery").setAttribute("src", "/images/battery_black.png");
+    document.getElementById("wifi").setAttribute("src", "/portfolio.github.io/images/wifi_black.png");
+    document.getElementById("micro").setAttribute("src", "/portfolio.github.io/images/micro_black.png");
+    document.getElementById("battery").setAttribute("src", "/portfolio.github.io/images/battery_black.png");
 
     document.getElementById("phoneLeft").style.transitionTimingFunction = 'ease';
     document.getElementById("phoneLeft").style.animation = 'main_to_explain_left 0s 1 forwards'
@@ -195,7 +195,7 @@ function screenChangeFunction(event){
     for(let i = 1; i <= 7; i++){
         document.getElementById(`slide${i}`).innerHTML = "";
         const img = document.createElement("img");
-        img.setAttribute("src", `/images${slideImages[select][i - 1]}`)
+        img.setAttribute("src", `/portfolio.github.io/images${slideImages[select][i - 1]}`)
         if(select === "영어단어정복ABC"){
             img.style.width = '23%'
         }else if( select === "PasserBob" || select === "ReactCh" || select === "ChatPress"){
@@ -316,12 +316,12 @@ function screenChangeFunction(event){
     document.getElementById("stack").innerHTML = "";
     for(let  i = 0; i < projectInfo[select]["stack"].length; i++){
         let img = document.createElement("img");
-        img.setAttribute("src", `/images/${projectInfo[select]["stack"][i]}`);
+        img.setAttribute("src", `/portfolio.github.io/images/${projectInfo[select]["stack"][i]}`);
         img.setAttribute("class", "stackIcon")
         document.getElementById("stack").appendChild(img)
     }
     let githubLink = document.createElement("img");
-    githubLink.setAttribute("src", `/images/github.png`);
+    githubLink.setAttribute("src", `/portfolio.github.io/images/github.png`);
     githubLink.setAttribute("class", "github")
     githubLink.onclick = () => {
         location.href = projectInfo[select]["github"];
@@ -336,9 +336,9 @@ function screenChangeFunction(event){
 
 function screenChangeMainFunction(){
     document.getElementById("timezone").style.color = 'rgb(255,255,255)';
-    document.getElementById("wifi").setAttribute("src", "/images/wifi_white.png");
-    document.getElementById("micro").setAttribute("src", "/images/micro_white.png");
-    document.getElementById("battery").setAttribute("src", "/images/battery_white.png");
+    document.getElementById("wifi").setAttribute("src", "/portfolio.github.io/images/wifi_white.png");
+    document.getElementById("micro").setAttribute("src", "/portfolio.github.io/images/micro_white.png");
+    document.getElementById("battery").setAttribute("src", "/portfolio.github.io/images/battery_white.png");
 
     document.getElementById("phoneLeft").style.transitionTimingFunction = 'ease';
     document.getElementById("phoneLeft").style.animation = 'explain_to_main_left 0s 1 forwards'
@@ -370,7 +370,7 @@ function mainHeaderResize(){
 
         headerLeft.innerHTML =  `<table>
                             <tr>
-                                <td rowspan="4" style="width: 30%; text-align: center;"><img src="/images/고신원_증명사진.jpg" alt="phto"></td>
+                                <td rowspan="4" style="width: 30%; text-align: center;"><img src="/portfolio.github.io/images/고신원_증명사진.jpg" alt="phto"></td>
                                 <td style="width: 12%;">성명</td>
                                 <td style="width: 23%;">고신원</td>
                                 <td style="width: 12%;">나이</td>
@@ -401,14 +401,14 @@ function mainHeaderResize(){
                         <div class="mainBlock">
                             <h3>Stack</h3>
                             <div class="headerStack">
-                                <img src="/images/react.png" alt="stack"/>
-                                <img src="/images/html.png" alt="stack"/>
-                                <img src="/images/css.png" alt="stack"/>
-                                <img src="/images/js.png" alt="stack"/>
-                                <img src="/images/spring.png" alt="stack"/>
-                                <img src="/images/node.png" alt="stack">
-                                <img src="/images/mysql.png" alt="stack">
-                                <img style="margin-top: 2.5%;" src="/images/aws.png" alt="stack">
+                                <img src="/portfolio.github.io/images/react.png" alt="stack"/>
+                                <img src="/portfolio.github.io/images/html.png" alt="stack"/>
+                                <img src="/portfolio.github.io/images/css.png" alt="stack"/>
+                                <img src="/portfolio.github.io/images/js.png" alt="stack"/>
+                                <img src="/portfolio.github.io/images/spring.png" alt="stack"/>
+                                <img src="/portfolio.github.io/images/node.png" alt="stack">
+                                <img src="/portfolio.github.io/images/mysql.png" alt="stack">
+                                <img style="margin-top: 2.5%;" src="/portfolio.github.io/images/aws.png" alt="stack">
                             </div>
                         </div>
                         <div class="mainBlock">
@@ -433,10 +433,10 @@ function mainHeaderResize(){
         headerRight.style.width = "70%";
 
    
-        headerLeft.innerHTML = `<img src="/images/고신원_증명사진.jpg" alt="photo">
+        headerLeft.innerHTML = `<img src="/portfolio.github.io/images/고신원_증명사진.jpg" alt="photo">
             <div id="detail">
-                <p><img src="/images/mail.png" alt="mail"> gci787@naver.com</p>
-                <p><img src="/images/phone.png" alt="mail"> 010-4338-4430</p>
+                <p><img src="/portfolio.github.io/images/mail.png" alt="mail"> gci787@naver.com</p>
+                <p><img src="/portfolio.github.io/images/phone.png" alt="mail"> 010-4338-4430</p>
             </div>`
         
     }
