@@ -426,8 +426,8 @@ function mainHeaderResize(){
                         <div class="mainBlock">
                             <h3>Education</h3>
                             <div class="headerStack">
-                                <span>2020.03 ~ 2025.02 동양미래대학교 컴퓨터소프트웨어공학과</span>
-                                <span>2017.03 ~ 2020.02 세명컴퓨터고등학교 스마트콘텐츠과</span>
+                                <span>2020.03 ~ 2025.02 동양미래대학교 컴퓨터소프트웨어공학과 학점 4.1</span>
+                                <span>2017.03 ~ 2020.02 세명컴퓨터고등학교 스마트콘텐츠과 내신 1.9</span>
                             </div>
                         </div>
                         <div class="mainBlock">
