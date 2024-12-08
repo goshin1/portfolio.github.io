@@ -7,48 +7,59 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="header">
-        <div id="screen">
-            <div class="timezone">
-                <span>
-                    12:35
-                </span>
-                <span>
-                    <img src="/images/wifi_white.png"/>
-                    <img src="/images/micro_white.png"/>
-                    70%
-                    <img src="/images/battery.png"/>
-                </span>
-            </div>
-            
+    <div id="screen">
+        <div id="timezone">
+            <span id="time">
+                12:35
+            </span>
+            <span>
+                <img id="wifi" src="/images/wifi_white.png"/>
+                <img id="micro" src="/images/micro_white.png"/>
+                90%
+                <img id="battery" src="/images/battery_white.png"/>
+            </span>
+        </div>
         
-            <div id="screenChange" style="float: left;">
+    
+        <div id="screenChange" style="float: left;">
 
-                <div class="screenBox" id="box1">
-                    <div id="mainHeader">
-                        <p>목표를 위해 집요하게 노력하는 개발자 고신원입니다!</p>
-                        <p>E-Mail gci787@naver.com</p>
-                    </div>
-                    <div id="mainSearch">
-                        <img src="/images/logo.png" alt="logo">
-                        <input id="searchText" type="text"/>
-                        <img src="/images/mic.png" alt="mic">
-                        <img src="/images/search.png" alt="search">
-                    </div>
-                    <div id="appMenu"></div>
-                    <div id="subMenu">
-                        <div class="subIcon" id="carrer">
-                            SPEC
+            <div class="screenBox" id="box1">
+                <div id="mainHeader" onclick="mainHeaderResize()">
+                    <div id="headerLeft">
+                        <img src="/images/고신원_증명사진.jpg" alt="photo">
+                        <div id="detail">
+                            <p><img src="/images/mail.png" alt="mail"> gci787@naver.com</p>
+                            <p><img src="/images/phone.png" alt="mail"> 010-4338-4430</p>
                         </div>
-                        <div class="subIcon" id="github">
+                    </div>
+                    <div id="headerRight">
+                        <div id="back">
+                            공부를 쌓아가는 개발자 고신원입니다!
                         </div>
-                        
                     </div>
                 </div>
+                <div id="mainSearch">
+                    <img src="/images/logo.png" alt="logo">
+                    <input id="searchText" type="text"/>
+                    <img src="/images/mic.png" alt="mic">
+                    <img src="/images/search.png" alt="search">
+                </div>
+                <div id="appMenu"></div>
+                <div id="subMenu">
+                    <div class="subIcon" id="carrer">
+                        SPEC
+                    </div>
+                    <a href="https://github.com/goshin1" class="subIcon" id="github">
+                    </a>
+                    
+                </div>
+                
+            </div>
 
-                <div class="screenBox" id="box2">
-                    <input type="button" class='prev' value="◀">
-                    <div class="container">
+            <div class="screenBox" id="box2">
+                <input type="button" class='prev' value="◀">
+                <div class="container">
+                    <div class="slideBox">
                         <div class='slide' id="slide1"></div>
                         <div class='slide' id="slide2"></div>
                         <div class='slide' id="slide3"></div>
@@ -57,30 +68,43 @@
                         <div class='slide' id="slide6"></div>
                         <div class='slide' id="slide7"></div>
                     </div>
-                    <input type="button" class='next' value="▶">
+                    <div id="slideBtns">
+                        <input type="button" class="slideBtn"/>
+                        <input type="button" class="slideBtn"/>
+                        <input type="button" class="slideBtn"/>
+                        <input type="button" class="slideBtn"/>
+                        <input type="button" class="slideBtn"/>
+                        <input type="button" class="slideBtn"/>
+                        <input type="button" class="slideBtn"/>
+                    </div>
+                </div>
+                <input type="button" class='next' value="▶">
 
 
-                    <div id="introduce">
-                        <h3>ReactCh</h3>
-                        <p id="purpose"></p>
-                        <p id="explain">주요 기술 구현과 아쉬웠던 점을 적고 이를 해결할 방안</p>
-                        Stack
-                        <div id="stack">
-                            <img class="stackIcon" src="/images/react.png"/>
-
-                            <img class="github" src="/images/github.png"/>
-                        </div>
+                <div id="introduce">
+                    <input id="mainBtn" type="button" onclick="screenChangeMainFunction()"/>
+                    <h3 id="projectTitle">프로젝트 타이틀</h3>
+                    <p id="projectDate">프로젝트 기간</p>
+                    <p id="projectPurpose">프로젝트 개요</p>
+                    <p id="projectExplain">주요 기술 구현과 아쉬웠던 점을 적고 이를 해결할 방안</p>
+                    Stack
+                    <div id="stack">
                     </div>
                 </div>
             </div>
 
-            
+            <!-- 스펙용 -->
+            <!-- <div class="screenBox" id="box3">
+
+            </div> -->
         </div>
-        <div id="phoneLeft">
-            <img id="loading" src="/images/loading.png"/>
-        </div>
-        <div id="phoneRight">
-        </div>
+
+        
+    </div>
+    <div id="phoneLeft">
+        <img id="loading" src="/images/loading.png"/>
+    </div>
+    <div id="phoneRight">
     </div>
 </body>
 <script src="/script.js"></script>

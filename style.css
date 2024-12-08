@@ -5,12 +5,12 @@ body {
     overflow:hidden;
   }
 
-#header{
+/* #header{
     width: 100%;
     height: 100vh;
     background-color: rgb(214, 214, 214);
     position: absolute;
-}
+} */
 
 /* 핸드폰 */
 #phoneBox{
@@ -130,7 +130,7 @@ body {
         transform : rotateY(180deg);
         border-left: none;
         background-image: none;
-        background-color: rgb(32, 32, 32);
+        background-color: rgb(255, 255, 255);
         opacity: 100%;
     }
 }
@@ -142,7 +142,7 @@ body {
     }
     100%{
         background-image: none;
-        background-color: rgb(32, 32, 32);
+        background-color: rgb(255, 255, 255);
         opacity: 100%;
     }
 }
@@ -153,7 +153,7 @@ body {
         margin-left: 50%;
         transform : rotateY(180deg);
         border-left: none;
-        background-color: rgb(32, 32, 32);
+        background-color: rgb(255, 255, 255);
         opacity: 100%;
     }
     100%{
@@ -169,7 +169,7 @@ body {
 @keyframes explain_to_main_right {
     0%{
         
-        background-color: rgb(32, 32, 32);
+        background-color: rgb(255, 255, 255);
         opacity: 100%;
     }
     100%{
@@ -226,7 +226,8 @@ body {
 /* 화면 */
 #screen{
     max-width: 1000px;
-    margin: 10px 24.5%;
+    min-width: 300px;
+    margin: 10px 25%;
     margin-top: 20px;
     width: 50%;
     position: absolute;
@@ -234,32 +235,45 @@ body {
     animation: screenOn 6s 1 forwards;
     aspect-ratio: 16 / 14;
     transition: all 0.2s;
+    overflow: hidden;
+}
+
+@media (max-width: 430px) {
+    #screen{
+        margin: 10px 15%;
+    }
+}
+
+@media (max-width: 400px) {
+    #screen{
+        margin: 10px 2.5%;
+    }
 }
 
 /* 상단 시계 및 와이파이 등 */
-.timezone{
+#timezone{
     top: 10px;
-    min-width: 300px;
+    min-width: 290px;
     width: 100%;
     height: 5%;
     line-height: -50px;
     color: rgb(255,255,255);
     font-size: 1vw;
 }
-.timezone span{
+#timezone span{
     width: 30%
 }
 
-.timezone span:nth-child(1){
+#timezone span:nth-child(1){
     float: left;
 }
-.timezone span:nth-child(2){
+#timezone span:nth-child(2){
     float: right;
     text-align: right;
     text-indent: 30px;
 }
 
-.timezone > span > img{
+#timezone > span > img{
     width: 7%
 }
 
@@ -289,22 +303,140 @@ body {
 /* 기본화면 */
 #mainHeader{
     margin: 20px auto;
-    padding-top: 5%;
-    text-indent: 3%;
     width: 90%;
-    height: 30%;
+    height: 35%;
     border-radius: 15px;
-    
-    background-image: url(/images/mainBack.png);
-    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    background-color: rgb(31, 31, 31);
     background-position: center;
     background-size: 100%;
-    color: rgb(255,255,255);
+    position: relative;
+    transition: all 0.2s;
 }
 
-#mainHeader p{
+#mainHeader > div{
+    float: left;
+}
+
+#headerLeft{
+    width: 25%;
+    height: 90%;
+    color: rgb(255,255,255);
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+#headerLeft > img{
+    margin: 10% auto;
+    width: 55%;
+    display: block;
+    border-radius: 5px;
+}
+
+#detail{
+    margin: 0 auto;
+    width: 90%;
+    height: 25%;
+    line-height: 150%;
+    text-indent: 10px;
+    font-size: 0.8vw;
+    background-color: rgb(27, 27, 27);
+    border-radius: 5px;
+    text-align: left;
+}
+
+#detail p{
+    margin: 0;
+    width: 100%;
+    height: 50%;
+    float: left;
+}
+
+#detail img{
+    margin-top: 3%;
+    margin-left: 2%;
+    width: 8%;
+    display: block;
+    float: left;
+}
+
+#headerRight{
+    margin : 2.5% 0px;
+    width: 70%;
+    height: 85%;
+    background-image: url(/images/mainBack.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+table, tr, td{
+    text-indent: 10px;
+    border: 1px solid #5f5f5f;
+    border-collapse: collapse;
+}
+
+table{
+    margin: 5% 2.5%;
+    width: 95%;
+    font-size: 0.8vw;
+    display: block;
+    border-radius: 5px;
+}
+
+table img{
+    margin: 2% auto;
+    width: 50%;
+}
+
+.mainBlock{
+    margin: 2.5%;
+    width: 95%;
+    height: 20%;
+}
+
+.mainBlock h2{
+    font-size: 1.8vw;
+}
+
+.headerStack{
+    padding: 5px 0px;
+    width: 100%;
+    max-height: 60%;
+    font-size: 0.8vw;
+    line-height:1.8em;
+    text-indent: 10px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 15px;
+}
+
+.headerStack:nth-child(2){
+    height: 60%;
+}
+
+.headerStack span{
+    display: block;
+}
+
+.headerStack img{
+    margin: 1% 10px;
+    width: 8%;
+    float: left;
+    cursor: pointer;
+}
+
+#back{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
     font-size: 1.5vw;
     font-weight: bold;
+    color: rgb(37, 37, 37);
+    background-color: rgba(255,255,255,0.4);
 }
 
 #mainSearch{
@@ -351,9 +483,6 @@ body {
     transition: all 0.2s;
 }
 
-#subMenu{
-    
-}
 
 .icon{
     margin: 1% 0 0 4%;
@@ -403,65 +532,81 @@ body {
     background-image: url(/images/github.png);
     background-color: rgb(214, 214, 214);
     border: 0.3vw solid rgb(31, 31, 31);
+    display: block;
 }
 
+
+/* 슬라이드 */
+
 .container {
-    width:100%;
-    height:60%;
-    perspective:500px;
-    transform-style: preserve-3d;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60%;
     overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.slideBox {
+    display: flex;
+    height: 100%;
+    /* transition: transform 0.5s ease-in-out; */
 }
 
 .slide {
-    transition:0.5s;
-    width:45%;
-    aspect-ratio: 9/16;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
+    min-width: 100%; /* 각 슬라이드의 크기를 화면 크기에 맞추기 */
+    height: 100%; /* 원하는 높이로 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
 }
 
-.slide:nth-of-type(1),.slide:nth-of-type(2){  
-        transform:translate(calc(-50%*5.1),-50%) translateZ(-100px);
-}
-.slide:nth-of-type(3){
-    transform:translate(calc(-55%*3.1),-50%) translateZ(-50px);
-}
-.slide:nth-of-type(4){
-    transform:translate(calc(-50%*1.1),-50%) translateZ(50px) ;
-}
-.slide:nth-of-type(5){
-    transform:translate(calc(-65%*-0.9),-50%) translateZ(-50px) ;
-}
-.slide:nth-of-type(6),.slide:nth-of-type(7){
-    transform:translate(calc(-60%*-2.9),-50%) translateZ(-100px) ;
+.slide img{
+    margin: auto;
 }
 
-.prev, .next{
-    background-color: rgb(31, 31, 31);
+input.prev, input.next {
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+input.prev {
+    left: 10px;
+}
+
+input.next {
+    right: 10px;
+}
+
+#slideBtns{
+    margin: -2% 15%;
+    width: 70%;
+    height: 3%;
+    z-index: 3;
+    position: absolute;
+}
+
+.slideBtn{
+    margin: 0 3.25%;
+    width: 7%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    float: left;
     border: none;
     border-radius: 5px;
-    font-size: 2vw;
-    color: rgb(255,255,255);
-    cursor: pointer;
-    width: 5%;
-    height: 10%;
-    position: absolute;
-    z-index: 5;
-}
-
-.prev{
-    margin-top: 20%;
-}
-
-.next{
-    margin-top: -30%;
-    right: 0;
+    transition: all 0.2s;
 }
 
 #introduce{
@@ -469,18 +614,45 @@ body {
     padding: 0.5% 1.5%;
     width: 90%;
     height: 35%;
-    font-size: 1vw;
     border-radius: 15px;
     background-color: rgba(0,0,0,0.7);
     color: rgb(255,255,255);
+    overflow-y: auto;
+    overflow-x: none;
+}
+
+#introduce::-webkit-scrollbar {
+    width: 10px;
+}
+#introduce::-webkit-scrollbar-thumb {
+    background-color: #5f5f5f;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+#introduce::-webkit-scrollbar-track {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px #000000;
+}
+
+
+#introduce h3{
+    font-size: 1vw;
+    text-transform: capitalize
+}
+
+#introduce p{
+    font-size: 0.7vw;
 }
 
 #stack{
     margin: 2% auto;
+    padding-bottom: 5px;
     width: 100%;
     height: 25%;
     border-radius: 10px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(48, 48, 48);
     display: block;
 }
 
@@ -494,4 +666,23 @@ body {
     margin-right: 10px;
     float: right;
 
+}
+
+#mainBtn{
+    margin-top: 1%;
+    right: 5%;
+    width: 5%;
+    font-size: 0.6vw;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 5px;
+    background-image: url(/images/back_white.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-color: rgb(41, 41, 41);
+    position: absolute;
+    display: block;
+    cursor: pointer;
 }
