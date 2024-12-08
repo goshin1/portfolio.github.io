@@ -373,11 +373,11 @@ function mainHeaderResize(){
     const mainHeader = document.getElementById("mainHeader");
     const headerLeft = document.getElementById("headerLeft");
     const headerRight = document.getElementById("headerRight");
-    const detail = document.getElementById("detail");
 
     if(mainHeader.style.height === "35%"){
         mainHeader.style.height = "100%";
         headerLeft.style.width = "95%";
+        headerLeft.style.overflowY = "auto";
         headerRight.style.width = "0%";
 
         headerLeft.innerHTML =  `<table>
@@ -442,6 +442,7 @@ function mainHeaderResize(){
     }else{
         mainHeader.style.height = "35%";
         headerLeft.style.width = "25%";
+        headerLeft.style.overflowY = "hidden";
         headerRight.style.width = "70%";
 
    
