@@ -250,9 +250,9 @@ body {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 375px) {
     #screen{
-        margin: 10px 1%;
+        margin: 10px 10%;
     }
 }
 
