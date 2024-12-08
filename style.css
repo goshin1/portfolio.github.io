@@ -254,7 +254,7 @@ body {
         margin: 5% 15%;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 425px) {
     #screen{
         margin: 5% 12.5%;
     }
@@ -564,12 +564,11 @@ table img{
 
 
 /* 슬라이드 */
-
 .container {
-    margin: 0;
+    margin: 0px 1.5%;
     padding: 0;
     box-sizing: border-box;
-    width: 100%;
+    width: 98%;
     height: 60%;
     overflow: hidden;
     position: relative;
