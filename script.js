@@ -2,6 +2,10 @@ const toDay = new Date();
 document.getElementById("time").innerHTML = toDay.getHours() + ":" + ("0" + toDay.getMinutes()).slice(-2)
 document.getElementById("mainHeader").style.height = "35%";
 
+const screen = document.getElementById("screen");
+const browserWidth = window.innerWidth;
+let value = (browserWidth - screen.offsetWidth) / 2;
+screen.style.marginLeft = `${value}px`;
 
 window.addEventListener("resize", function() {
     const screen = document.getElementById("screen");
