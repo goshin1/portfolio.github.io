@@ -277,9 +277,10 @@ body {
 
 /* 상단 시계 및 와이파이 등 */
 #timezone{
+    margin-left: 1%;
     top: 10px;
     min-width: 290px;
-    width: 100%;
+    width: 98%;
     height: 5%;
     line-height: -50px;
     color: rgb(255,255,255);
@@ -423,8 +424,9 @@ table img{
     height: 20%;
 }
 
-.mainBlock h2{
-    font-size: 1.8vw;
+
+.mainBlock h3 {
+    font-size: 2vw;
 }
 
 .headerStack{
