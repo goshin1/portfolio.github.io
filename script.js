@@ -361,8 +361,6 @@ function mainHeaderResize(){
     const headerRight = document.getElementById("headerRight");
     const detail = document.getElementById("detail");
 
-    console.log(mainHeader.style.height)
-
     if(mainHeader.style.height === "35%"){
         mainHeader.style.height = "100%";
         headerLeft.style.width = "95%";
