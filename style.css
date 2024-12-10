@@ -258,7 +258,7 @@ body {
 }
 
 
-@media (max-width: 580px) {
+@media (max-width: 520px) {
     #screen{
         margin-top: 5%;
         aspect-ratio: 9 / 13;
