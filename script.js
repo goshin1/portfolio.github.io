@@ -384,10 +384,10 @@ function mainHeaderResize(){
         headerLeft.innerHTML =  `<table>
                             <tr>
                                 <td rowspan="4" style="width: 30%; text-align: center;"><img src="/portfolio.github.io/images/고신원_증명사진.jpg" alt="phto"></td>
-                                <td style="width: 12%;">성명</td>
-                                <td style="width: 23%;">고신원</td>
-                                <td style="width: 12%;">나이</td>
-                                <td style="width: 23%;">24세</td>
+                                <td style="width: 13%;">성명</td>
+                                <td style="width: 22%;">고신원</td>
+                                <td style="width: 13%;">나이</td>
+                                <td style="width: 22%;">24세</td>
                             </tr>
                             <tr>
                                 
