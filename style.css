@@ -258,7 +258,7 @@ body {
 }
 
 
-@media (max-width: 620px) {
+@media (max-width: 580px) {
     #screen{
         margin-top: 5%;
         aspect-ratio: 9 / 13;
@@ -267,7 +267,7 @@ body {
         aspect-ratio: 9 / 27;
     }
     #detail{
-        font-size: 1vw;
+        font-size: 0.8vw;
     }
     table{
         text-indent: 2px;
