@@ -267,11 +267,11 @@ body {
         aspect-ratio: 9 / 27;
     }
     #detail{
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
     table{
         text-indent: 2px;
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
     .mainBlock h3{
         font-size: 3vw;
