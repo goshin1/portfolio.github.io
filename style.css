@@ -234,6 +234,7 @@ body {
         font-size: 0.8vw;
     }
     table{
+        text-indent: 10px;
         font-size: 0.8vw;
     }
     .mainBlock h3{
@@ -269,6 +270,7 @@ body {
         font-size: 1.2vw;
     }
     table{
+        text-indent: 2px;
         font-size: 1.2vw;
     }
     .mainBlock h3{
@@ -432,7 +434,6 @@ body {
 }
 
 table, tr, td{
-    text-indent: 10px;
     border: 1px solid #5f5f5f;
     border-collapse: collapse;
 }
